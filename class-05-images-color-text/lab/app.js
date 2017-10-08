@@ -18,7 +18,7 @@ function sum(a,b){ //eslint-disable-line
 }
 
 // TODO: Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -39,7 +39,7 @@ function multiply(a,b){ //eslint-disable-line
 }
 
 // TODO: Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -55,12 +55,16 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // TODO: Write your code here
-function sumAndMultiply(a,b,c){ //eslint-disable-line
-
+function sumAndMultiply(a,b,c){//eslint-disable-line
+  var addition = sum(sum(a,b)[0],c)[0];
+  var multiplication = multiply(multiply(a,b)[0],c)[0];
+  var message1 = a + ' and ' + b + ' and ' + c + ' sum to ' + addition + '.';
+  var Message2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplication + '.';
+  return [addition, multiplication, message1, Message2];
 }
 
 // TODO: Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
